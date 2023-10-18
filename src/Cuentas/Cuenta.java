@@ -7,6 +7,7 @@ public class Cuenta {
     private int id;
     private String nombre;
     Scanner src = new Scanner(System.in);
+    static final char ENTER = '\n';
 
     public Cuenta() {
     }
@@ -22,7 +23,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return  id + ".- " + nombre + '\n';
+        return  id + ".- " + nombre + ENTER;
     }
 
     // Método para crear una lista de cuentas a partir de una lista de nombres

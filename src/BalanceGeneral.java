@@ -6,6 +6,7 @@ public class BalanceGeneral {
     static Activo activo;
     static Pasivo pasivo;
     static CapitalContable capitalContable;
+    static final char ENTER = '\n';
 
     public BalanceGeneral() {
         activo = new Activo();  // Crear una instancia de Activo
@@ -35,7 +36,7 @@ public class BalanceGeneral {
         BalanceGeneral balanceGeneral = new BalanceGeneral();
         balanceGeneral.encabezado();  // Imprimir el encabezado
         capitalContable.total();
-        System.out.println('\n' + '\n');
+        System.out.println(ENTER);
         balanceGeneral.piePagina();  // Imprimir el pie de página
     }
 }
