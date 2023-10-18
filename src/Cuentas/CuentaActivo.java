@@ -65,6 +65,17 @@ public class CuentaActivo {
     }
 
     void cuentaActivoDiferido() {
+        int gastosInvestigacion = src.nextInt(),
+                gastosPreoperativos = src.nextInt(),
+                gastosMercadotecnia = src.nextInt(),
+                gastosOrganizacion = src.nextInt(),
+                gastosInstalacion = src.nextInt(),
+                papeleriaUtiles = src.nextInt(),
+                propaganda = src.nextInt(),
+                primasSeguros = src.nextInt(),
+                rentasPagadasAnticipado = src.nextInt(),
+                inpuestosPagadosAnticipado = src.nextInt();
+
         ArrayList<Cuenta> activoDiferido = new ArrayList<>();
     }
 
