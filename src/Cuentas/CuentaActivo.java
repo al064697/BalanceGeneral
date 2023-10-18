@@ -69,7 +69,7 @@ public class CuentaActivo {
                 gastosMercadotecnia = src.nextInt(), gastosOrganizacion = src.nextInt(),
                 gastosInstalacion = src.nextInt(), papeleriaUtiles = src.nextInt(), propaganda = src.nextInt(),
                 primasSeguros = src.nextInt(), rentasPagadasAnticipado = src.nextInt(),
-                inpuestosPagadosAnticipado = src.nextInt();
+                interesesPagadosAnticipado = src.nextInt();
 
         ArrayList<Cuenta> activoDiferido = new ArrayList<>();
         activoDiferido.add(new Cuenta(17, "Gastos de investigacion y desarrollo"));
@@ -81,7 +81,7 @@ public class CuentaActivo {
         activoDiferido.add(new Cuenta(23, "Propaganda y publicidad"));
         activoDiferido.add(new Cuenta(24, "Primas de seguros"));
         activoDiferido.add(new Cuenta(25, "Rentas pagadas por anticipado"));
-        activoDiferido.add(new Cuenta(26, "Impuestos pagados por anticipado"));
+        activoDiferido.add(new Cuenta(26, "Intereses pagados por anticipado"));
 
         if(Integer.toString(gastosInvestigacion).equals(" ")) {activoDiferido.remove(0);}
         if(Integer.toString(gastosPreoperativos).equals(" ")) {activoDiferido.remove(1);}
@@ -92,9 +92,11 @@ public class CuentaActivo {
         if(Integer.toString(propaganda).equals(" ")) {activoDiferido.remove(6);}
         if(Integer.toString(primasSeguros).equals(" ")) {activoDiferido.remove(7);}
         if(Integer.toString(rentasPagadasAnticipado).equals(" ")) {activoDiferido.remove(8);}
-        if(Integer.toString(inpuestosPagadosAnticipado).equals(" ")) {activoDiferido.remove(9);}
+        if(Integer.toString(interesesPagadosAnticipado).equals(" ")) {activoDiferido.remove(9);}
 
-
+        totalActivosDiferidos = gastosInvestigacion + gastosPreoperativos + gastosMercadotecnia + gastosOrganizacion
+                + gastosInstalacion + papeleriaUtiles + propaganda + primasSeguros + rentasPagadasAnticipado
+                + interesesPagadosAnticipado;
     }
 
 }
