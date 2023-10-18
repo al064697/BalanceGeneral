@@ -29,7 +29,6 @@ public class Pasivo extends Cuenta {
 
     // Método para calcular el total del activo
     public double totalPasivo() {
-        Pasivo pasivo = new Pasivo();
         double total = flotante() + fijo() + creditosDiferidos();
         System.out.println("Total pasivo $" + total);
         return total;
