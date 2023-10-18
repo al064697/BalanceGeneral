@@ -10,5 +10,5 @@ public class Cuenta {
         this.nombre = nombre;
     }
     public void setTotalCuenta(int totalCuenta) {this.totalCuenta = totalCuenta;}
-    @Override public String toString() {return  id + nombre;}
+    @Override public String toString() {return  id + nombre + totalCuenta;}
 }
