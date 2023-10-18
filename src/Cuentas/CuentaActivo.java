@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CuentaActivo {
     Scanner src = new Scanner(System.in);
-    private int totalActivosCirculantes, totalActivosFijo, totalActivosDiferidos, totalActivo;
+    private int totalActivoCirculantes, totalActivoFijo, totalActivoDiferidos;
 
 
     void cuentaActivoCirculante() {
@@ -32,7 +32,7 @@ public class CuentaActivo {
         if(Integer.toString(valDeudores).equals(" ")) {activoCirculante.remove(6);}
         if(Integer.toString(valAnticipoProveedores).equals(" ")) {activoCirculante.remove(7);}
 
-        totalActivosCirculantes = valCaja + valBancos + valInversionesTemp + valMercan + valClientes + valDocsCobrar
+        totalActivoCirculantes = valCaja + valBancos + valInversionesTemp + valMercan + valClientes + valDocsCobrar
                 + valDeudores + valAnticipoProveedores;
     }
 
@@ -60,7 +60,7 @@ public class CuentaActivo {
         if(Integer.toString(valInvPermanentes).equals(" ")) {activoFijo.remove(6);}
         if(Integer.toString(valDocsCobrarLargoPlazo).equals(" ")) {activoFijo.remove(7);}
 
-        totalActivosFijo = valTerrenos + valEdificios + valMobiliario + valComputo + valReparto + valDepositos
+        totalActivoFijo = valTerrenos + valEdificios + valMobiliario + valComputo + valReparto + valDepositos
                 + valInvPermanentes + valDocsCobrarLargoPlazo;
     }
 
@@ -94,9 +94,10 @@ public class CuentaActivo {
         if(Integer.toString(rentasPagadasAnticipado).equals(" ")) {activoDiferido.remove(8);}
         if(Integer.toString(interesesPagadosAnticipado).equals(" ")) {activoDiferido.remove(9);}
 
-        totalActivosDiferidos = gastosInvestigacion + gastosPreoperativos + gastosMercadotecnia + gastosOrganizacion
+        totalActivoDiferidos = gastosInvestigacion + gastosPreoperativos + gastosMercadotecnia + gastosOrganizacion
                 + gastosInstalacion + papeleriaUtiles + propaganda + primasSeguros + rentasPagadasAnticipado
                 + interesesPagadosAnticipado;
     }
 
+    public int totalActivos() {return totalActivoCirculantes + totalActivoFijo +totalActivoDiferidos;}
 }
