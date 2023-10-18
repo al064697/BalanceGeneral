@@ -1,9 +1,7 @@
 package Cuentas;
 
 public class Cuenta {
-    private int id;
-    private String nombre;
-
+    private int id; private String nombre;
     public Cuenta(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;

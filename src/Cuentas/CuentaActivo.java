@@ -7,19 +7,17 @@ public class CuentaActivo {
 
     // Método para crear una lista de cuentas a partir de una lista de nombres
     ArrayList<Cuenta> crearCuentas(String... nombres) {
-    /*NOTA: El parámetro del método (String... nombres) es un parámetro varargs, lo que significa que puedes pasar
+    /* NOTA: El parámetro del método (String... nombres) es un parámetro varargs, lo que significa que puedes pasar
             cualquier número de argumentos String al método, y se tratarán como un array */
 
         ArrayList<Cuenta> cuentas = new ArrayList<>(); // Crear una nueva lista vacía para almacenar las cuentas
 
-
-        for (int i = 0; i < nombres.length; i++) { // Recorrer cada nombre en la lista de nombres
-
+        for (int i = 0; i < nombres.length; i++) {
             // Crear una nueva cuenta con el índice actual (i+1) como ID y el nombre actual como nombre
             // Luego, agregar esta nueva cuenta a la lista de cuentas
             cuentas.add(new Cuenta(i + 1, nombres[i]));
         }
-        return cuentas;// Devolver la lista completa de cuentas
+        return cuentas;
     }
 
 
@@ -30,8 +28,7 @@ public class CuentaActivo {
         // Leer los valores de las cuentas del usuario
         double[] valores = new double[cuentas.size()];
         for (int i = 0; i < cuentas.size(); i++) {
-            System.out.print(cuentas.get(i).getNombre() + " $");
-            valores[i] = src.nextDouble();
+            System.out.print(cuentas.get(i).getNombre() + " $"); valores[i] = src.nextDouble();
         }
 
         // Crear una nueva lista con las cuentas que no están vacías
