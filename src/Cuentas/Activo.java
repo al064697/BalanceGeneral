@@ -30,18 +30,9 @@ public class Activo extends Cuenta {
 
     // Método para calcular el total del activo
     public double totalActivo() {
-        //return Circulante() + Fijo() + Diferido();
         Activo activo = new Activo();
         double total = Circulante() + Fijo() + Diferido();
         System.out.println("Total activo $" + total);
         return total;
     }
-
-
-/*    public static void main(String[] args) {
-        System.out.println("Activo");
-        Activo activo = new Activo();
-
-        System.out.println("Total del activo: $" + total);
-    }*/
 }

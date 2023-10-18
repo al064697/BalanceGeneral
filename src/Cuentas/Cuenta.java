@@ -9,7 +9,6 @@ public class Cuenta {
     Scanner src = new Scanner(System.in);
 
     public Cuenta() {
-
     }
 
     public Cuenta(int id, String nombre) {
@@ -46,11 +45,13 @@ public class Cuenta {
         ArrayList<Cuenta> cuentasNoVacias = new ArrayList<>(); // Crear una nueva lista con las cuentas que no están vacías
         double total = 0;
         for (int i = 0; i < cuentas.size(); i++) {
-            System.out.print(cuentas.get(i).getNombre() + " $"); valores[i] = src.nextDouble();
+            System.out.print(cuentas.get(i).getNombre() + " $");
+            valores[i] = src.nextDouble();
         }
         for (int i = 0; i < cuentas.size(); i++) {
             if (valores[i] != 0) {
-                cuentasNoVacias.add(cuentas.get(i)); total += valores[i];
+                cuentasNoVacias.add(cuentas.get(i));
+                total += valores[i];
             }
         }
         System.out.println("Total " + tipo.toLowerCase() + " $" + total); // Imprimir el total de la cuenta
