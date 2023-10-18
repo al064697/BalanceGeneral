@@ -65,15 +65,10 @@ public class CuentaActivo {
     }
 
     void cuentaActivoDiferido() {
-        int gastosInvestigacion = src.nextInt(),
-                gastosPreoperativos = src.nextInt(),
-                gastosMercadotecnia = src.nextInt(),
-                gastosOrganizacion = src.nextInt(),
-                gastosInstalacion = src.nextInt(),
-                papeleriaUtiles = src.nextInt(),
-                propaganda = src.nextInt(),
-                primasSeguros = src.nextInt(),
-                rentasPagadasAnticipado = src.nextInt(),
+        int gastosInvestigacion = src.nextInt(), gastosPreoperativos = src.nextInt(),
+                gastosMercadotecnia = src.nextInt(), gastosOrganizacion = src.nextInt(),
+                gastosInstalacion = src.nextInt(), papeleriaUtiles = src.nextInt(), propaganda = src.nextInt(),
+                primasSeguros = src.nextInt(), rentasPagadasAnticipado = src.nextInt(),
                 inpuestosPagadosAnticipado = src.nextInt();
 
         ArrayList<Cuenta> activoDiferido = new ArrayList<>();
@@ -88,6 +83,16 @@ public class CuentaActivo {
         activoDiferido.add(new Cuenta(25, "Rentas pagadas por anticipado"));
         activoDiferido.add(new Cuenta(26, "Impuestos pagados por anticipado"));
 
+        if(Integer.toString(gastosInvestigacion).equals(" ")) {activoDiferido.remove(0);}
+        if(Integer.toString(gastosPreoperativos).equals(" ")) {activoDiferido.remove(1);}
+        if(Integer.toString(gastosMercadotecnia).equals(" ")) {activoDiferido.remove(2);}
+        if(Integer.toString(gastosOrganizacion).equals(" ")) {activoDiferido.remove(3);}
+        if(Integer.toString(gastosInstalacion).equals(" ")) {activoDiferido.remove(4);}
+        if(Integer.toString(papeleriaUtiles).equals(" ")) {activoDiferido.remove(5);}
+        if(Integer.toString(propaganda).equals(" ")) {activoDiferido.remove(6);}
+        if(Integer.toString(primasSeguros).equals(" ")) {activoDiferido.remove(7);}
+        if(Integer.toString(rentasPagadasAnticipado).equals(" ")) {activoDiferido.remove(8);}
+        if(Integer.toString(inpuestosPagadosAnticipado).equals(" ")) {activoDiferido.remove(9);}
 
 
     }
