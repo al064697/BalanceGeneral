@@ -77,6 +77,19 @@ public class CuentaActivo {
                 inpuestosPagadosAnticipado = src.nextInt();
 
         ArrayList<Cuenta> activoDiferido = new ArrayList<>();
+        activoDiferido.add(new Cuenta(17, "Gastos de investigacion y desarrollo"));
+        activoDiferido.add(new Cuenta(18, "Gastos en etapas preoperativas de organizacion y administracion"));
+        activoDiferido.add(new Cuenta(19, "Gastos de mercadotecnia"));
+        activoDiferido.add(new Cuenta(20, "Gastos de organizacion"));
+        activoDiferido.add(new Cuenta(21, "Gastos de instalacion"));
+        activoDiferido.add(new Cuenta(22, "Papeleria y utiles"));
+        activoDiferido.add(new Cuenta(23, "Propaganda y publicidad"));
+        activoDiferido.add(new Cuenta(24, "Primas de seguros"));
+        activoDiferido.add(new Cuenta(25, "Rentas pagadas por anticipado"));
+        activoDiferido.add(new Cuenta(26, "Impuestos pagados por anticipado"));
+
+
+
     }
 
 }
