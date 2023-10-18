@@ -1,23 +1,39 @@
 package Cuentas;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 public class CuentaActivo {
-    Scanner src = new Scanner(System.in);
+    Scanner src = new Scanner(System.in); // Crear un objeto Scanner para leer la entrada del usuario
 
+    // Método para crear una lista de cuentas a partir de una lista de nombres
     ArrayList<Cuenta> crearCuentas(String... nombres) {
+        // Crear una nueva lista vacía para almacenar las cuentas
         ArrayList<Cuenta> cuentas = new ArrayList<>();
+
+        // Recorrer cada nombre en la lista de nombres
         for (int i = 0; i < nombres.length; i++) {
-            cuentas.add(new Cuenta(i+1, nombres[i]));
+            // Crear una nueva cuenta con el índice actual (i+1) como ID y el nombre actual como nombre
+            // Luego, agregar esta nueva cuenta a la lista de cuentas
+            cuentas.add(new Cuenta(i + 1, nombres[i]));
         }
+
+        // Devolver la lista completa de cuentas
         return cuentas;
     }
+
+
+    // Método para calcular el total de una lista de cuentas
     double cuentaActivo(ArrayList<Cuenta> cuentas, String tipo) {
-        System.out.println(tipo);
+        System.out.println(tipo); // Imprimir el tipo de cuenta
+
+        // Leer los valores de las cuentas del usuario
         double[] valores = new double[cuentas.size()];
         for (int i = 0; i < cuentas.size(); i++) {
             System.out.print(cuentas.get(i).getNombre() + " $");
             valores[i] = src.nextDouble();
         }
+
+        // Crear una nueva lista con las cuentas que no están vacías
         ArrayList<Cuenta> cuentasNoVacias = new ArrayList<>();
         double total = 0;
         for (int i = 0; i < cuentas.size(); i++) {
@@ -26,28 +42,39 @@ public class CuentaActivo {
                 total += valores[i];
             }
         }
+
+        // Imprimir el total de la cuenta
         System.out.println("Total " + tipo.toLowerCase() + " $" + total);
         return total;
     }
 
+    // Métodos para calcular el total de activos circulantes, fijos y diferidos
     double cuentaActivoCirculante() {
-        ArrayList<Cuenta> activoCirculante = crearCuentas("Caja", "Bancos", "Inversiones temporales", "Mercancias", "Clientes", "Documentos por cobrar", "Deudores diversos", "Anticipo a proveedores");
+        ArrayList<Cuenta> activoCirculante = crearCuentas("Caja", "Bancos", "Inversiones temporales",
+                "Mercancias", "Clientes", "Documentos por cobrar", "Deudores diversos", "Anticipo a proveedores");
+
         return cuentaActivo(activoCirculante, "Circulante");
     }
 
     double cuentaActivoFijo() {
-        ArrayList<Cuenta> activoFijo = crearCuentas("Terrenos", "Edificios", "Mobiliario y equipo", "Equipo de computo", "Equipo de entrega y reparto", "Depositos en garantia", "Inversiones temporales", "Documentos por cobrar a largo plazo");
+        ArrayList<Cuenta> activoFijo = crearCuentas("Terrenos", "Edificios", "Mobiliario y equipo",
+                "Equipo de computo", "Equipo de entrega y reparto", "Depositos en garantia", "Inversiones temporales",
+                "Documentos por cobrar a largo plazo");
+
         return cuentaActivo(activoFijo, "Fijo");
     }
 
     double cuentaActivoDiferido() {
-        ArrayList<Cuenta> activoDiferido = crearCuentas("Gastos de investigacion y desarrollo", "Gastos en etapas preoperativas de organizacion y administracion", "Gastos de mercadotecnia", "Gastos de organizacion", "Gastos de instalacion", "Papeleria y utiles", "Propaganda y publicidad", "Primas de seguros", "Rentas pagadas por anticipado", "Intereses pagados por anticipado");
+        ArrayList<Cuenta> activoDiferido = crearCuentas("Gastos de investigacion y desarrollo",
+                "Gastos en etapas preoperativas de organizacion y administracion", "Gastos de mercadotecnia",
+                "Gastos de organizacion", "Gastos de instalacion", "Papeleria y utiles", "Propaganda y publicidad",
+                "Primas de seguros", "Rentas pagadas por anticipado", "Intereses pagados por anticipado");
+
         return cuentaActivo(activoDiferido, "Diferido");
     }
 
-    double totalActivo() {
-        return cuentaActivoCirculante() + cuentaActivoFijo() + cuentaActivoDiferido();
-    }
+    // Método para calcular el total del activo
+    double totalActivo() {return cuentaActivoCirculante() + cuentaActivoFijo() + cuentaActivoDiferido();}
 
     public static void main(String[] args) {
         System.out.println("Activo");
@@ -56,4 +83,3 @@ public class CuentaActivo {
         System.out.println("Total del Activo: $" + total);
     }
 }
-
