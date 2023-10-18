@@ -1,14 +1,13 @@
 package Cuentas;
 
 public class Cuenta {
-    int id;
-    String nombre;
-    int totalCuenta;
+    private int id;
+    private String nombre;
 
-    Cuenta(int id, String nombre) {
+    public Cuenta(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
-    public void setTotalCuenta(int totalCuenta) {this.totalCuenta = totalCuenta;}
-    @Override public String toString() {return  id + nombre + totalCuenta;}
+    public String getNombre() {return nombre;}
+    @Override public String toString() {return  id + ".- " + nombre + '\n';}
 }
