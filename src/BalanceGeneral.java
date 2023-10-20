@@ -3,8 +3,8 @@ import Cuentas.*;
 
 public class BalanceGeneral {
     Scanner src = new Scanner(System.in);
-    static Activo activo;
-    static Pasivo pasivo;
+    static Cuenta activo;
+    static Cuenta pasivo;
     static CapitalContable capitalContable;
     static final char ENTER = '\n';
 

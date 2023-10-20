@@ -13,7 +13,7 @@ public class Activo extends Cuenta {
 
     double Fijo() {
         ArrayList<Cuenta> activoFijo = crearCuentas("Terrenos", "Edificios", "Mobiliario y equipo",
-                "Equipo de computo", "Equipo de entrega y reparto", "Depositos en garantia", "Inversiones temporales",
+                "Equipo de computo", "Equipo de entrega y reparto", "Depositos en garantia", "Inversiones permanentes",
                 "Documentos por cobrar a largo plazo");
 
         return cuenta(activoFijo, "Fijo");

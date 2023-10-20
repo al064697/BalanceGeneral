@@ -46,8 +46,7 @@ public class Cuenta {
         ArrayList<Cuenta> cuentasNoVacias = new ArrayList<>(); // Crear una nueva lista con las cuentas que no están vacías
         double total = 0;
         for (int i = 0; i < cuentas.size(); i++) {
-            System.out.print(cuentas.get(i).getNombre() + " $");
-            valores[i] = src.nextDouble();
+            System.out.print(cuentas.get(i).getNombre() + " $"); valores[i] = src.nextDouble();
         }
         for (int i = 0; i < cuentas.size(); i++) {
             if (valores[i] != 0) {
